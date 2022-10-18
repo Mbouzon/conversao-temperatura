@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: meupod
+  labels:
+    name: meupod
+spec:
+  containers:
+  - name: convtemp
+    image: mbouzon/conversao-temperatura:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8080
